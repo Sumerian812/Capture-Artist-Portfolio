@@ -1,12 +1,14 @@
 import React from "react";
 import AboutSection from "../components/AboutSection";
+import ServicesSection from "../components/ServiceSection"
 
 const AboutUs = () => {
-    return(
-        <div>
+    return (
+        <>
             <AboutSection />
-        </div>
-    )
+            <ServicesSection />
+        </>
+    );
 }
 
-export default AboutUs
+export default AboutUs;
