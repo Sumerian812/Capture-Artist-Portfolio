@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import athlete from "../img/athlete-small.png";
 import racer from "../img/theracer-small.png";
 import goodTimes from "../img/goodtimes-small.png";
-import { MovieState } from "../movieState";
 // Framer Motion
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
