@@ -1,31 +1,41 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 import athlete from "../img/athlete-small.png";
 import racer from "../img/theracer-small.png";
 import goodTimes from "../img/goodtimes-small.png";
+import { MovieState } from "../movieState";
+// Framer Motion
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const OurWork = () => {
     return (
-        <StyledDiv>
+        <StyledDiv
+            variants={pageAnimation}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            style={{ background: "#fff" }}
+        >
             <StyledMovie>
                 <h2>The Athlete</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to="/work/the-athlete">
                     <img src={athlete} alt="athlete" />
                 </Link>
             </StyledMovie>
             <StyledMovie>
                 <h2>The Racer</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to="/work/the-racer">
                     <img src={racer} alt="racer" />
                 </Link>
             </StyledMovie>
             <StyledMovie>
                 <h2>Good Times</h2>
                 <div className="line"></div>
-                <Link>
+                <Link to="/work/good-times">
                     <img src={goodTimes} alt="good times" />
                 </Link>
             </StyledMovie>
@@ -33,7 +43,7 @@ const OurWork = () => {
     );
 };
 
-const StyledDiv = styled.div`
+const StyledDiv = styled(motion.div)`
     min-height: 100vh;
     overflow: hidden;
     padding: 5rem 10rem;

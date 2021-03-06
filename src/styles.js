@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 // Styled components
 export const StyledAbout = styled.div`
