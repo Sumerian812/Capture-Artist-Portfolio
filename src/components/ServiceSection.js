@@ -6,11 +6,14 @@ import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png";
 import styled from "styled-components/macro";
 import { StyledAbout, StyledImage, StyledDescription } from "../styles";
-
+import { useScroll } from "./useScroll";
+import { fade } from "../animation";
 
 const ServicesSection = () => {
+    const [element, controls] = useScroll();
+
     return (
-        <StyledServices>
+        <StyledServices ref={element} animate={controls} variants={fade}>
             <StyledDescription>
                 <h2>High <span>quality</span> service.</h2>
                 <StyledCards>
