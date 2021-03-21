@@ -2,6 +2,7 @@ import React from "react";
 import home1 from "../img/home1.png"
 import { StyledAbout, StyledImage, StyledHide, StyledDescription } from "../styles";
 import Wave from "./Wave";
+import { Link } from "react-router-dom";
 // Framer Motion
 import { motion } from "framer-motion";
 import { titleAnimation, fade, photoAnimation } from "../animation";
@@ -27,12 +28,12 @@ const AboutSection = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec hendrerit sodales augue, ac aliquam ligula varius vel.
                 </motion.p>
-                <motion.button variants={fade}>Contact us</motion.button>
+                <Link to="/contact"><motion.button variants={fade}>Contact us</motion.button></Link>
             </StyledDescription>
             <StyledImage>
                 <motion.img variants={photoAnimation} src={home1} alt="" />
             </StyledImage>
-            <Wave/>
+            <Wave />
         </StyledAbout>
     )
 }
