@@ -11,6 +11,11 @@ import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
+  window.onload = () => {
+    setTimeout(() => {
+      window.scrollTo(0,0);
+    }, 100)
+  }
 
   return (
     <div className="App">

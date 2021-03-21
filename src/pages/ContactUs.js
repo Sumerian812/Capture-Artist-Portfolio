@@ -12,7 +12,8 @@ const ContactUs = () => {
             initial="hidden"
             animate="show"
             exit="exit"
-            style={{ background: "#fff" }}>
+            style={{ background: "#fff" }}
+        >
             <StyledTitle>
                 <StyledHide>
                     <motion.h2 variants={titleAnimation}>
@@ -49,11 +50,17 @@ const SytledContact = styled(motion.div)`
     padding: 5rem 10rem;
     color: #353535;
     min-height: 90vh;
+    @media (max-width: 1200px){
+        padding: 2rem;
+    }
 `;
 
 const StyledTitle = styled(motion.div)`
     margin-bottom: 4rem;
     color: black;
+    @media (max-width: 1200px){
+        margin-top: 4rem;
+    }
 `;
 
 const StyledHide = styled(motion.div)`
@@ -65,6 +72,10 @@ const StyledCircle = styled(motion.div)`
     width: 3rem;
     height: 3rem;
     background: #353535;
+    @media (max-width: 1200px){
+        width: 2rem;
+        height: 2rem;
+    }
 `;
 
 const StyledSocial = styled(motion.div)`
@@ -72,6 +83,11 @@ const StyledSocial = styled(motion.div)`
     align-items: center;
     h2 {
         margin: 2rem;
+    }
+    @media (max-width: 1200px){
+        h2 {
+        font-size: 2rem;
+    }
     }
 `;
 

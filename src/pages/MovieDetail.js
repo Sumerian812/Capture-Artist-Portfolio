@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components/macro";
 import { MovieState } from "../movieState";
+import ScrollTop from "../components/ScrollTop";
 // Framer Motion
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
@@ -17,6 +18,7 @@ const MovieDetail = () => {
 
     return (
         <StyledDetails variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+            <ScrollTop />
             <StyledHeadline>
                 <h1>{movie?.title}</h1>
                 <img src={movie?.mainImg} alt="movie" />
@@ -72,7 +74,10 @@ const StyledAwards = styled.div`
     align-items: center;
     justify-content: space-around;
     margin: 5rem 10rem;
-
+    @media (max-width: 1200px){
+        display: block;
+        margin: 2rem;
+    }
 `;
 
 const StyledAward = styled.div`
