@@ -17,27 +17,31 @@ const MovieDetail = () => {
     }, [id, movies])
 
     return (
-        <StyledDetails
-            variants={pageAnimation}
-            initial="hidden"
-            animate="show"
-            exit="exit"
-            key={movie.title}
-        >
-            <ScrollTop />
-            <StyledHeadline>
-                <h1>{movie?.title}</h1>
-                <img src={process.env.PUBLIC_URL + movie?.mainImg} alt="movie" />
-            </StyledHeadline>
-            <StyledAwards>
-                {movie?.awards?.map(award =>
-                    <Award title={award.title} description={award.description} key={award.url} />
-                )}
-            </StyledAwards>
-            <StyledImage>
-                <img src={process.env.PUBLIC_URL + movie?.secondaryImg} alt="movie" />
-            </StyledImage>
-        </StyledDetails>
+        <>
+            {movie &&
+                <StyledDetails
+                    variants={pageAnimation}
+                    initial="hidden"
+                    animate="show"
+                    exit="exit"
+                    key={movie.title}
+                >
+                    <ScrollTop />
+                    <StyledHeadline>
+                        <h1>{movie?.title}</h1>
+                        <img src={process.env.PUBLIC_URL + movie?.mainImg} alt="movie" />
+                    </StyledHeadline>
+                    <StyledAwards>
+                        {movie?.awards?.map(award =>
+                            <Award title={award.title} description={award.description} key={award.url} />
+                        )}
+                    </StyledAwards>
+                    <StyledImage>
+                        <img src={process.env.PUBLIC_URL + movie?.secondaryImg} alt="movie" />
+                    </StyledImage>
+                </StyledDetails>
+            }
+        </>
     );
 }
 
