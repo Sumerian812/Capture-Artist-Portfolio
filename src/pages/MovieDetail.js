@@ -27,7 +27,7 @@ const MovieDetail = () => {
             <ScrollTop />
             <StyledHeadline>
                 <h1>{movie?.title}</h1>
-                <img src={movie?.mainImg} alt="movie" />
+                <img src={process.env.PUBLIC_URL + movie?.mainImg} alt="movie" />
             </StyledHeadline>
             <StyledAwards>
                 {movie?.awards?.map(award =>
@@ -35,7 +35,7 @@ const MovieDetail = () => {
                 )}
             </StyledAwards>
             <StyledImage>
-                <img src={movie?.secondaryImg} alt="movie" />
+                <img src={process.env.PUBLIC_URL + movie?.secondaryImg} alt="movie" />
             </StyledImage>
         </StyledDetails>
     );
