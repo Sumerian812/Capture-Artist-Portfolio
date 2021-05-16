@@ -2,8 +2,8 @@ export const MovieState = () => {
   return [
     {
       title: "The Athlete",
-      mainImg: `${process.env.PUBLIC_URL}/assets/athlete-small.png`,
-      secondaryImg: `${process.env.PUBLIC_URL}/assets/athlete2.png`,
+      mainImg: `${process.env.PUBLIC_URL}/work/assets/athlete-small.png`,
+      secondaryImg: `${process.env.PUBLIC_URL}/work/assets/athlete2.png`,
       url: "/work/the-athlete",
       awards: [
         {
@@ -25,9 +25,9 @@ export const MovieState = () => {
     },
     {
       title: "Good Times",
-      mainImg: `${process.env.PUBLIC_URL}/assets/goodtimes-small.png`,
+      mainImg: `${process.env.PUBLIC_URL}/work/assets/goodtimes-small.png`,
       url: "/work/good-times",
-      secondaryImg: `${process.env.PUBLIC_URL}/assets/good-times2.jpg`,
+      secondaryImg: `${process.env.PUBLIC_URL}/work/assets/good-times2.jpg`,
       awards: [
         {
           title: "Heartwarming",
@@ -48,9 +48,9 @@ export const MovieState = () => {
     },
     {
       title: "The Racer",
-      mainImg: `${process.env.PUBLIC_URL}/assets/theracer-small.png`,
+      mainImg: `${process.env.PUBLIC_URL}/work/assets/theracer-small.png`,
       url: "/work/the-racer",
-      secondaryImg: `${process.env.PUBLIC_URL}/assets/the-racer2.jpg`,
+      secondaryImg: `${process.env.PUBLIC_URL}/work/assets/the-racer2.jpg`,
       awards: [
         {
           title: "Magnificient",
