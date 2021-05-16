@@ -17,7 +17,13 @@ const MovieDetail = () => {
     }, [id, movies])
 
     return (
-        <StyledDetails variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+        <StyledDetails
+            variants={pageAnimation}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            key={movie.title}
+        >
             <ScrollTop />
             <StyledHeadline>
                 <h1>{movie?.title}</h1>
