@@ -1,9 +1,17 @@
+//Import Images
+import athlete from "./img/athlete-small.png";
+import goodtimes from "./img/goodtimes-small.png";
+import theracer from "./img/theracer-small.png";
+import athlete2 from "./img/athlete2.png";
+import goodtimes2 from "./img/good-times2.jpg";
+import theracer2 from "./img/the-racer2.jpg";
+
 export const MovieState = () => {
   return [
     {
       title: "The Athlete",
-      mainImg: `${process.env.PUBLIC_URL}/assets/athlete-small.png`,
-      secondaryImg: `${process.env.PUBLIC_URL}/assets/athlete2.png`,
+      mainImg: athlete,
+      secondaryImg: athlete2,
       url: "/work/the-athlete",
       awards: [
         {
@@ -25,9 +33,9 @@ export const MovieState = () => {
     },
     {
       title: "Good Times",
-      mainImg: `${process.env.PUBLIC_URL}/assets/goodtimes-small.png`,
+      mainImg: goodtimes,
       url: "/work/good-times",
-      secondaryImg: `${process.env.PUBLIC_URL}/assets/good-times2.jpg`,
+      secondaryImg: goodtimes2,
       awards: [
         {
           title: "Heartwarming",
@@ -48,9 +56,9 @@ export const MovieState = () => {
     },
     {
       title: "The Racer",
-      mainImg: `${process.env.PUBLIC_URL}/assets/theracer-small.png`,
+      mainImg: theracer,
       url: "/work/the-racer",
-      secondaryImg: `${process.env.PUBLIC_URL}/assets/the-racer2.jpg`,
+      secondaryImg: theracer2,
       awards: [
         {
           title: "Magnificient",
