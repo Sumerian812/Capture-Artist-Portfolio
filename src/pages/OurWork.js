@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
-import athlete from "../img/athlete-small.png";
-import racer from "../img/theracer-small.png";
-import goodTimes from "../img/goodtimes-small.png";
 // Framer Motion
 import { motion } from "framer-motion";
 import {
@@ -36,7 +33,11 @@ const OurWork = () => {
                 <motion.div className="line" variants={lineAnimation}></motion.div>
                 <Link to="/work/the-athlete">
                     <StlyeHide>
-                        <motion.img variants={photoAnimation} src={athlete} alt="athlete" />
+                        <motion.img
+                            variants={photoAnimation}
+                            src={`${process.env.PUBLIC_URL}/assets/athlete-small.png`}
+                            alt="athlete"
+                        />
                     </StlyeHide>
                 </Link>
             </StyledMovie>
@@ -44,14 +45,14 @@ const OurWork = () => {
                 <h2>The Racer</h2>
                 <motion.div className="line" variants={lineAnimation}></motion.div>
                 <Link to="/work/the-racer">
-                    <img src={racer} alt="racer" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/theracer-small.png`} alt="racer" />
                 </Link>
             </StyledMovie>
             <StyledMovie ref={element2} variants={fade} animate={controls2} initial="hidden">
                 <h2>Good Times</h2>
                 <motion.div className="line" variants={lineAnimation}></motion.div>
                 <Link to="/work/good-times">
-                    <img src={goodTimes} alt="good times" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/goodtimes-small.png`} alt="good times" />
                 </Link>
             </StyledMovie>
         </StyledDiv>

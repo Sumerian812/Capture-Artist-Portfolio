@@ -1,5 +1,4 @@
 import React from "react";
-import home1 from "../img/home1.png"
 import { StyledAbout, StyledImage, StyledHide, StyledDescription } from "../styles";
 import Wave from "./Wave";
 import { Link } from "react-router-dom";
@@ -31,7 +30,11 @@ const AboutSection = () => {
                 <Link to="/contact"><motion.button variants={fade}>Contact us</motion.button></Link>
             </StyledDescription>
             <StyledImage>
-                <motion.img variants={photoAnimation} src={home1} alt="" />
+                <motion.img
+                    variants={photoAnimation}
+                    src={`${process.env.PUBLIC_URL}/assets/home1.png`}
+                    alt="home1"
+                />
             </StyledImage>
             <Wave />
         </StyledAbout>
