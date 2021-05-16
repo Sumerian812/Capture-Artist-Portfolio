@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
+// Imaged
+import athlete from "../img/athlete-small.png";
+import goodtimes from "../img/goodtimes-small.png";
+import theracer from "../img/theracer-small.png";
 // Framer Motion
 import { motion } from "framer-motion";
 import {
@@ -35,7 +39,7 @@ const OurWork = () => {
                     <StlyeHide>
                         <motion.img
                             variants={photoAnimation}
-                            src={`${process.env.PUBLIC_URL}/assets/athlete-small.png`}
+                            src={athlete}
                             alt="athlete"
                         />
                     </StlyeHide>
@@ -45,14 +49,14 @@ const OurWork = () => {
                 <h2>The Racer</h2>
                 <motion.div className="line" variants={lineAnimation}></motion.div>
                 <Link to="/work/the-racer">
-                    <img src={`${process.env.PUBLIC_URL}/assets/theracer-small.png`} alt="racer" />
+                    <img src={theracer} alt="racer" />
                 </Link>
             </StyledMovie>
             <StyledMovie ref={element2} variants={fade} animate={controls2} initial="hidden">
                 <h2>Good Times</h2>
                 <motion.div className="line" variants={lineAnimation}></motion.div>
                 <Link to="/work/good-times">
-                    <img src={`${process.env.PUBLIC_URL}/assets/goodtimes-small.png`} alt="good times" />
+                    <img src={goodtimes} alt="good times" />
                 </Link>
             </StyledMovie>
         </StyledDiv>

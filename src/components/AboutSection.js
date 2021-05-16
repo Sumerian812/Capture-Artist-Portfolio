@@ -2,6 +2,8 @@ import React from "react";
 import { StyledAbout, StyledImage, StyledHide, StyledDescription } from "../styles";
 import Wave from "./Wave";
 import { Link } from "react-router-dom";
+// Images
+import home1 from "../img/home1.png";
 // Framer Motion
 import { motion } from "framer-motion";
 import { titleAnimation, fade, photoAnimation } from "../animation";
@@ -32,7 +34,7 @@ const AboutSection = () => {
             <StyledImage>
                 <motion.img
                     variants={photoAnimation}
-                    src={`${process.env.PUBLIC_URL}/assets/home1.png`}
+                    src={home1}
                     alt="home1"
                 />
             </StyledImage>
